@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eventos en tu Comunidad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    
+    <ion-list-header>
+      <ion-label>Música en Vivo</ion-label>
+    </ion-list-header>
+    <ng-container *ngFor="let event of events">
+      <ion-card button (click)="openEvent(event)">
+        <ion-card-header>
+          <ion-card-title>{{ event.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="{{ event.imageUrl }}">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ event.title }}</h2>
+            <p>{{ event.description }}</p>
+            <p>{{ event.date }}</p>
+            <p>{{ event.location }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+    </ng-container>
+
+    
+
+  </ion-list>
+
+ 
+</ion-content>

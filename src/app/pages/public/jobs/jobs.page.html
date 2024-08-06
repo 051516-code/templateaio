@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>jobs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+
+    <ion-item *ngFor="let job of jobs" (click)="openJobDetail(job)">
+
+      <ion-thumbnail slot="start">
+        <img [src]="job.imageUrl" alt="Job Thumbnail" />
+      </ion-thumbnail>
+      
+      <ion-label>
+        <h2>{{ job.title }}</h2>
+        <p>{{ job.description }}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,18 @@
+<!-- src/app/pages/jobs/job-detail/job-detail.component.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Job Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="job">
+  <ion-card>
+    <img [src]="job.imageUrl" alt="Job Thumbnail"/>
+    <ion-card-header>
+      <ion-card-title>{{ job.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ job.description }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

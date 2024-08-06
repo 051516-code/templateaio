@@ -1,0 +1,149 @@
+ion-content {
+    --background: #c2bcbc; /* Cambiado a un tono más suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    text-align: center;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 50%;
+  }
+  
+  .logo {
+    font-size: 100px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo span {
+    margin: 0 10px;
+    position: relative;
+    animation: slideIn 1s ease-out forwards, shutter 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .logo span:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  
+  .logo span:nth-child(2) {
+    animation-delay: 0.7s;
+  }
+  
+  .logo span:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  
+  .logo span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: #0072ff;
+    bottom: -10px;
+    left: 0;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes shutter {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  @keyframes grow {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Nuevo estilo para reflejar el propósito de la app */
+  .neighborhood {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out 1.5s forwards;
+    opacity: 0;
+    z-index: 100;
+  }
+  
+  .neighborhood::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: #0072ff; /* Color de acento */
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 60px;
+    }
+  
+    .tagline {
+      font-size: 18px;
+    }
+  }
+  
+  /* Estilos para el footer */
+  .footer {
+    margin-top: 20%;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  /* Animación para salida rápida */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Aplicar la animación de salida después de un retraso */
+  .container.fade-out {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-delay: 2s; /* Retraso de 3 segundos */
+    animation-fill-mode: forwards;
+  }
+  

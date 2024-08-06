@@ -1,0 +1,45 @@
+ion-content {
+  --padding-start: 5px;
+  --padding-end: 5px;
+}
+
+ion-grid {
+  margin-top: 10px;
+  --ion-grid-padding: 4px;
+  --ion-grid-column-padding: 2px;
+}
+
+ion-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el minmax según sea necesario */
+  gap: 10px; /* Espaciado entre las tarjetas */
+}
+
+ion-card.business-card {
+  height: 130px; /* Ajusta la altura según sea necesario */
+  display: flex;
+  flex-direction: column; /* La imagen y el contenido estarán en columna */
+  justify-content: space-between;
+  text-align: center;
+  overflow: hidden;
+  margin: 0; /* Elimina márgenes para una alineación precisa */
+
+  /* Estilos opcionales para mejorar el diseño */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+ion-card.business-card img {
+  width: 100%; /* Asegura que la imagen ocupe el ancho completo de la tarjeta */
+  height: 70%; /* Ajusta la altura de la imagen */
+  object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+}
+
+ion-card-content {
+  padding: 8px; /* Añade padding para separar el contenido del borde de la tarjeta */
+}
+
+ion-card-title {
+  font-size: 14px; /* Ajusta el tamaño del texto según sea necesario */
+  margin: 0;
+}

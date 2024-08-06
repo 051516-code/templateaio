@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis Empresas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngIf="businesses.length > 0; else noBusinesses">
+      <ion-col size="12" size-md="6" size-lg="4" size-xl="3" *ngFor="let business of businesses" (click)="viewBusiness(business)">
+        <ion-card class="business-card">
+          <img [src]="business.image" alt="{{ business.name }}" />
+          <ion-card-content>
+            <ion-card-title>{{ business.name }}</ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ng-template #noBusinesses>
+    <div class="no-businesses">
+      <p>No hay empresas registradas.</p>
+    </div>
+  </ng-template>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addBusiness()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

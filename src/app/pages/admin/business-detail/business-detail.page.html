@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles de Empresa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <!-- Este ion-router-outlet será donde se cargarán las páginas asociadas a cada tab -->
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="feedback">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+        <ion-label>FeedBack</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="presentation">
+        <ion-icon name="brush-outline"></ion-icon>
+        <ion-label>Presentation</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="landing">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Landing Page</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="settings">
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  
+</ion-content>

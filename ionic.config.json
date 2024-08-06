@@ -1,0 +1,7 @@
+{
+  "name": "AioApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
